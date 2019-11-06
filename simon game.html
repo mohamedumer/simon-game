@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Pacifico&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./simon.css">
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="head">GUESS THE COLOR PATTERN</div>
+    <div id="score">your Score:</div>
+    <div id="highscores">High Score:</div>
+    <div id="top">Topper:</div>
+    <div class="container">
+      <button id="but" onclick="newgame()" style="top: 310px;left: 123.5;">start</button>
+      <button class="restart" onclick="reset()" style="left: 1028.5;top: 312px;"> restart </button>
+      <div class="con">
+        <div id="blue" onClick="check(this)"></div>
+        <div id="red" onClick="check(this)"></div>
+        <div id="green" onClick="check(this)"></div>
+        <div id="yellow" onClick="check(this)"></div>
+      </div>
+    </div>
+    <script src="./simon.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
