@@ -8,7 +8,7 @@ var game = {
 };
 document.getElementById("highscores").innerHTML =
   "High Score:" + parseInt(localStorage.highscore);
-document.getElementById("top").innerHTML = "Top Player:" + localStorage.a;
+document.getElementById("top").innerHTML = "Topper: " + localStorage.a;
 
 function newgame() {
   clearGame();
