@@ -1,84 +1,65 @@
-body {
-  background-color: black;
- overflow: hidden;
-}
-
-
-.head {
-  font-size: 40px;
-  color: #00ace6;
-  text-align: center;
-  font-family: "Abril Fatface", cursive;
-}
-.bright {
-  width: 200px;
-  height: 200px;
-  opacity: 1.5 !important;
-}
-
-#blue {
-  background-color: blue;
-
-  width: 120px;
-  height:120px;
-  opacity: 0.4;
- 
-
-  border: 5px solid white;
-}
-
-#green {
-  background-color: green;
-
-  width: 120px;
-  height:120px;
-  opacity: 0.4;
- 
-  border: 5px solid white;
-}
-
-#red {
-  background-color: red;
-  border: 5px solid white;
-
-  width: 120px;
-  height:120px;
-  opacity: 0.4;
- 
-}
-
-#yellow {
-  background-color: yellow;
-
-  border: 5px solid white;
-  width: 120px;
-  height:120px;
-  opacity: 0.4;
- 
-}
-button {
-  width: 130px;
-  font-size: 25px;
-  border-radius: 50%;
-  background-color: black;
-
-  font-family: "Pacifico", cursive;
-  color: white;
-  border: black;
-}
-#score {
-  font-family: "Pacifico", cursive;
-  font-size: 30px;
-  color: green;
-}
-#highscores {
-  font-family: "Pacifico", cursive;
-  font-size: 30px;
-  color: white;
-}
-
-#top {
-  font-family: "Pacifico", cursive;
-  font-size: 30px;
-  color: #00e64d;
-}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Aldrich&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./simon.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="container-fluid head" style=" overflow: hidden;">GUESS THE COLOR PATTERN</div>
+    <div class="container-fluid "style=" overflow: hidden;">
+      <div class="row justify-content-center">
+        <div class="col-5 text-center" id="score">your Score:</div>
+        <div class="col-5 text-center" id="highscores">High Score:</div>
+        
+      </div>
+    </div>
+    <div class="container-fluid pt-4" style=" overflow: hidden;">
+      <div class="row justify-content-center">
+        <div class="col-5 text-center">
+          <button onclick="newgame()">start</button>
+        </div>
+        <div class="col-5 text-center">
+          <button onclick="reset()">restart</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid  pb-4 " style=" overflow: hidden;" >
+      <div class="row justify-content-center">
+        <div id="blue" onClick="check(this)"></div>
+        <div id="green" onClick="check(this)"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div id="red" onClick="check(this)"></div>
+        <div id="yellow" onClick="check(this)"></div>
+      </div>
+    </div>
+<div class="container-fluid " style="overflow: hidden;">
+  <div class="row justify-content-center" id="top"></div>
+</div>
+    <script src="./simon.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
