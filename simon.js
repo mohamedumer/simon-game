@@ -6,9 +6,21 @@ var game = {
   player: [],
   score: 0
 };
-document.getElementById("highscores").innerHTML =
+
+if(parseInt(localStorage.highscore)=="NaN"){
+  document.getElementById("highscores").innerHTML="High Score:0"
+}
+else{
+  document.getElementById("highscores").innerHTML =
   "High Score:" + parseInt(localStorage.highscore);
-document.getElementById("top").innerHTML = "Topper: " + localStorage.a;
+}
+if( localStorage.a=="undefined"){
+  document.getElementById("top").innerHTML = "Topper: none " ;
+}
+else{
+  document.getElementById("top").innerHTML = "Topper: " + localStorage.a;
+}
+
 
 function newgame() {
   clearGame();
