@@ -41,10 +41,10 @@ body {
 #blue {
   background-color: blue;
 
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height:120px;
   opacity: 0.4;
-  border-top-left-radius: 180px;
+ 
 
   border: 5px solid white;
 }
@@ -52,10 +52,10 @@ body {
 #green {
   background-color: green;
 
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height:120px;
   opacity: 0.4;
-  border-top-right-radius: 180px;
+ 
   border: 5px solid white;
 }
 
@@ -63,24 +63,24 @@ body {
   background-color: red;
   border: 5px solid white;
 
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height:120px;
   opacity: 0.4;
-  border-bottom-left-radius: 180px;
+ 
 }
 
 #yellow {
   background-color: yellow;
 
   border: 5px solid white;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height:120px;
   opacity: 0.4;
-  border-bottom-right-radius: 180px;
+ 
 }
 button {
   width: 200px;
-  font-size: 50px;
+  font-size: 25px;
   border-radius: 50%;
   background-color: black;
 
