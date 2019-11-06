@@ -27,11 +27,11 @@
   </head>
   <body>
     <div class="container-fluid head" style=" overflow: hidden;">GUESS THE COLOR PATTERN</div>
-    <div class="container-fluid" style=" overflow: hidden;">
+    <div class="container-fluid "style=" overflow: hidden;">
       <div class="row justify-content-center">
-        <div class="col-4 text-center" id="score">your Score:</div>
-        <div class="col-4 text-center" id="highscores">High Score:</div>
-        <div class="col-4 text-center" id="top"></div>
+        <div class="col-5 text-center" id="score">your Score:</div>
+        <div class="col-7 text-center" id="highscores">High Score:</div>
+        
       </div>
     </div>
     <div class="container-fluid pt-4" style=" overflow: hidden;">
@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid  " style=" overflow: hidden;" >
+    <div class="container-fluid  pb-4 " style=" overflow: hidden;" >
       <div class="row justify-content-center">
         <div id="blue" onClick="check(this)"></div>
         <div id="green" onClick="check(this)"></div>
@@ -54,7 +54,9 @@
         <div id="yellow" onClick="check(this)"></div>
       </div>
     </div>
-
+<div class="container-fluid " style="overflow: hidden;">
+  <div class="row justify-content-center" id="top"></div>
+</div>
     <script src="./simon.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
