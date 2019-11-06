@@ -1,161 +1,106 @@
-  body{
-  background-color:black; 
-  }
-  #blue:hover{
-    transform:scale(1.0);
-    background-color: blue;
-    opacity:1;
-  }
-  #green:hover{
-    transform:scale(1.0);
-    background-color: green;
-    opacity:1;
-  }
-  #red:hover{
-    transform:scale(1.0);
-    background-color: red;
-    opacity:1;
-  }
-  #yellow:hover{
-    transform:scale(1.0);
-    background-color: yellow;
-    opacity:1;
-  }
-  .col-md-3{
-    background-color: black;
-    width:240px;
-    height: 500px;
-    
-  }
-  .head{
-    font-size: 40px;
-    color:#00ace6;
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;
-
-  }
-  .bright {
-  width:200px;
-  height:200px;
-  opacity:1.5 !important;
+body {
+  background-color: black;
+}
+#blue:hover {
+  transform: scale(1);
+  background-color: blue;
+  opacity: 1;
+}
+#green:hover {
+  transform: scale(1);
+  background-color: green;
+  opacity: 1;
+}
+#red:hover {
+  transform: scale(1);
+  background-color: red;
+  opacity: 1;
+}
+#yellow:hover {
+  transform: scale(1);
+  background-color: yellow;
+  opacity: 1;
+}
+.col-md-3 {
+  background-color: black;
+  width: 240px;
+  height: 500px;
+}
+.head {
+  font-size: 40px;
+  color: #00ace6;
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+}
+.bright {
+  width: 200px;
+  height: 200px;
+  opacity: 1.5 !important;
 }
 
 #blue {
-  background-color:blue;
-  top:146px;
-  left: 467.5px;
-  right:20px;
-  width:200px;
-  height:200px;
-  opacity:0.4;
-  border-top-left-radius:180px;
-  position: absolute;
-  border: 5px solid white ;
- 
-  
+  background-color: blue;
+
+  width: 200px;
+  height: 200px;
+  opacity: 0.4;
+  border-top-left-radius: 180px;
+
+  border: 5px solid white;
 }
 
 #green {
-  position: absolute;
-  right:20px;
-  background-color:green;
-  top:146px;
-  left: 683.5px;
-  width:200px;
-  height:200px;
-  opacity:0.4;
-  border-top-right-radius:180px;
-  border: 5px solid white ;
-  
+  background-color: green;
+
+  width: 200px;
+  height: 200px;
+  opacity: 0.4;
+  border-top-right-radius: 180px;
+  border: 5px solid white;
 }
 
 #red {
-  right:20px;
-  position: absolute;
-  background-color:red;
-  border: 5px solid white ;
-  left: 467.5px;
-  top: 280px;
-  width:200px;
-  height:200px;
-  opacity:0.4;
-  border-bottom-left-radius: 180px;
-  margin-top:80px;
- 
+  background-color: red;
+  border: 5px solid white;
 
+  width: 200px;
+  height: 200px;
+  opacity: 0.4;
+  border-bottom-left-radius: 180px;
 }
 
 #yellow {
-  position: absolute;
-  background-color:yellow;
-  left: 683.5px;
-  margin-right:20px;
-  top: 280px;
-  border: 5px solid white ;
-  width:200px;
-  height:200px;
-  opacity:0.4;
+  background-color: yellow;
+
+  border: 5px solid white;
+  width: 200px;
+  height: 200px;
+  opacity: 0.4;
   border-bottom-right-radius: 180px;
-  margin-top:80px;
-  
 }
-button{
-  width:200px;
-  font-size:50px;
+button {
+  width: 200px;
+  font-size: 50px;
   border-radius: 50%;
   background-color: black;
-  position: absolute;
-  font-family: 'Pacifico', cursive;
-  color:white;
-  border:black;
 
+  font-family: "Pacifico", cursive;
+  color: white;
+  border: black;
 }
-#score{
-  font-family: 'Pacifico', cursive;
+#score {
+  font-family: "Pacifico", cursive;
   font-size: 30px;
-  color:green;
-  position: absolute;
-  top: 11px;
-  left: 8px;
-
+  color: green;
 }
-#highscores{
-  font-family: 'Pacifico', cursive;
+#highscores {
+  font-family: "Pacifico", cursive;
   font-size: 30px;
-  color:white;
-  margin-top:30px;
-  position: absolute;
-  top: 49px;
-  left: 7px;
+  color: white;
+}
 
-}
-.con{
-  margin-right:100px;
-}
-#top{
-  float: right;
-  font-family: 'Pacifico', cursive;
+#top {
+  font-family: "Pacifico", cursive;
   font-size: 30px;
-  color:#00e64d;
-  margin-right: 57px;
-
+  color: #00e64d;
 }
-.restart{
-  float: right;
-}
-#but{
-  animation:mymove 2s infinite;
-}
-@keyframes mymove{
-  0%{top:280px}
-     50% {top:340px}
-     100%{top:280px}
-    }
-.restart{
-  animation:myremove 2s infinite;
-}
-@keyframes myremove{
-      0%{top:280px}
-     50% {top:340px}
-     100%{top:280px}
-    }
