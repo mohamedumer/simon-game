@@ -89,7 +89,7 @@ function finalcheck(x) {
     } else {
       new Audio("crop.mp3").play();
       game.score++;
-      document.getElementById("score").innerHTML = "score:" + game.score;
+      document.getElementById("score").innerHTML = "your Score:" + game.score;
       generator();
     }
   } else {
