@@ -3,11 +3,7 @@ body {
   overflow:hidden;
 }
 
-.col-md-3 {
-  background-color: black;
-  width: 240px;
-  height: 500px;
-}
+
 .head {
   font-size: 40px;
   color: #00ace6;
