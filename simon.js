@@ -7,7 +7,7 @@ var game = {
   score: 0
 };
 
-if(parseInt(localStorage.highscore)==NaN){
+if(isNaN(parseInt(localStorage.highscore))){
   document.getElementById("highscores").innerHTML="High Score:0"
 }
 else{
