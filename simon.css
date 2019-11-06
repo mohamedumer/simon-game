@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  overflow:hidden;
+ overflow: hidden;
 }
 
 
@@ -57,7 +57,7 @@ body {
  
 }
 button {
-  width: 200px;
+  width: 130px;
   font-size: 25px;
   border-radius: 50%;
   background-color: black;
