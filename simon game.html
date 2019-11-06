@@ -1,0 +1,322 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+
+<title> Memory Game </title>
+<head>
+<style>
+  
+  
+  body{
+  background-color:black; 
+  }
+  #blue:hover{
+    transform:scale(1.0);
+    background-color: blue;
+    opacity:1;
+  }
+  #green:hover{
+    transform:scale(1.0);
+    background-color: green;
+    opacity:1;
+  }
+  #red:hover{
+    transform:scale(1.0);
+    background-color: red;
+    opacity:1;
+  }
+  #yellow:hover{
+    transform:scale(1.0);
+    background-color: yellow;
+    opacity:1;
+  }
+  .col-md-3{
+    background-color: black;
+    width:240px;
+    height: 500px;
+    
+  }
+  .head{
+    font-size: 40px;
+    color:#00ace6;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+
+  }
+  .bright {
+  width:200px;
+  height:200px;
+  opacity:1.5 !important;
+}
+
+#blue {
+  background-color:blue;
+  top:146px;
+  left: 467.5px;
+  right:20px;
+  width:200px;
+  height:200px;
+  opacity:0.4;
+  border-top-left-radius:180px;
+  position: absolute;
+  border: 5px solid white ;
+ 
+  
+}
+
+#green {
+  position: absolute;
+  right:20px;
+  background-color:green;
+  top:146px;
+  left: 683.5px;
+  width:200px;
+  height:200px;
+  opacity:0.4;
+  border-top-right-radius:180px;
+  border: 5px solid white ;
+  
+}
+
+#red {
+  right:20px;
+  position: absolute;
+  background-color:red;
+  border: 5px solid white ;
+  left: 467.5px;
+  top: 280px;
+  width:200px;
+  height:200px;
+  opacity:0.4;
+  border-bottom-left-radius: 180px;
+  margin-top:80px;
+ 
+
+}
+
+#yellow {
+  position: absolute;
+  background-color:yellow;
+  left: 683.5px;
+  margin-right:20px;
+  top: 280px;
+  border: 5px solid white ;
+  width:200px;
+  height:200px;
+  opacity:0.4;
+  border-bottom-right-radius: 180px;
+  margin-top:80px;
+  
+}
+button{
+  width:200px;
+  font-size:50px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  font-family: 'Pacifico', cursive;
+  color:white;
+  border:black;
+
+}
+#score{
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color:green;
+  position: absolute;
+  top: 11px;
+  left: 8px;
+
+}
+#highscores{
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color:white;
+  margin-top:30px;
+  position: absolute;
+  top: 49px;
+  left: 7px;
+
+}
+.con{
+  margin-right:100px;
+}
+#top{
+  float: right;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color:#00e64d;
+  margin-right: 57px;
+
+}
+.restart{
+  float: right;
+}
+#but{
+  animation:mymove 2s infinite;
+}
+@keyframes mymove{
+  0%{top:280px}
+     50% {top:340px}
+     100%{top:280px}
+    }
+.restart{
+  animation:myremove 2s infinite;
+}
+@keyframes myremove{
+      0%{top:280px}
+     50% {top:340px}
+     100%{top:280px}
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="head">GUESS THE COLOR PATTERN</div>
+    <div id="score">your Score:</div>
+    <div id="highscores"> High Score:</div>
+  <div id="top">Topper:</div>
+<div class="container">
+    
+    <button id="but" onclick="newgame()" style="top: 310px;left: 123.5;">start</button>
+    
+  <button class="restart" onclick="reset()" style="left: 1028.5;top: 312px;">restart</button>
+   <div class="con">
+      <div id="blue" onClick="check(this)"></div>
+      <div id="red"  onClick="check(this)"></div>
+      <div id="green" onClick="check(this)"></div>
+      <div id="yellow" onClick="check(this)"></div>
+    </div>
+    
+
+</div>
+<script>
+
+
+    var k=0;
+    var game = {
+      count: 0,
+      possibilities: ['green','blue', 'red', 'yellow'],
+      currentGame: [],
+      player: [],
+      score:0
+  
+    }
+  document.getElementById("highscores").innerHTML= "High Score:" + parseInt(localStorage.highscore);
+  document.getElementById("top").innerHTML= "Top Player:" +(localStorage.a);
+  
+  
+  
+  
+  function newgame() {
+      
+      clearGame();
+    }
+  
+    function clearGame() {
+      game.currentGame = [];
+      game.count = 0;
+      generator();
+    }
+  
+    function generator(){
+      game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
+    showmoves();
+  }
+  
+  function showmoves() {
+    var i = 0;
+    var moves = setInterval(function(){
+      new Audio('beep.mp3').play();
+      playGame(game.currentGame[i]);
+      i++;
+      if (i >= game.currentGame.length) {
+        clearInterval(moves);
+      }
+    }, 600)
+  
+    Playerturn();
+  }
+  
+  function playGame(field) {
+    console.log(field);
+    document.getElementById(field).setAttribute("class","bright");
+   
+    setTimeout(function(){
+    document.getElementById(field).removeAttribute("class","bright");
+    }, 300);
+  }
+  
+  function Playerturn() {
+  
+    game.player = [];
+    
+  }
+  
+  function check(num) {
+     if(game.currentGame.length>0){
+    new Audio('foclick.mp3').play();
+    
+    k=k+1;
+    var field = num.id;
+    game.player.push(field);
+    console.log(game.player);
+    console.log(k);
+     
+    if(k==game.currentGame.length)
+    {
+    finalcheck(field);
+    k=0;
+    }
+     }
+  }
+  
+  function finalcheck(x) {
+        var check = JSON.stringify(game.player) === JSON.stringify(game.currentGame);
+        if (check) {
+          if(game.count == 20){
+            alert('You won! Congrats.');
+          } else {
+            new Audio('crop.mp3').play();
+            game.score++;
+            document.getElementById("score").innerHTML="score:" + game.score;
+            generator();
+          }
+  
+        }
+        else{
+  
+          alert("You are Wrong! Try Again")
+          if(localStorage.highscore)
+          {
+            if(game.score>parseInt(localStorage.highscore)) {
+              localStorage.highscore=game.score;
+              localStorage.a="";
+              localStorage.a=prompt("Hae Champion Enter Your Name!")
+  
+  
+            }
+          }
+  
+          else {
+              localStorage.highscore=1;
+            }
+          document.getElementById("highscores").innerHTML="High Score:" + parseInt(localStorage.highscore);
+          document.location.reload();
+        }
+  
+  }
+  function reset(){
+  document.location.reload();
+}
+  
+ // newgame();
+  </script>
+</body>
+</html>
