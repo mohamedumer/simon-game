@@ -7,14 +7,14 @@ var game = {
   score: 0
 };
 
-if(parseInt(localStorage.highscore)=="NaN"){
+if(parseInt(localStorage.highscore)==NaN){
   document.getElementById("highscores").innerHTML="High Score:0"
 }
 else{
   document.getElementById("highscores").innerHTML =
   "High Score:" + parseInt(localStorage.highscore);
 }
-if( localStorage.a=="undefined"){
+if( localStorage.a==undefined){
   document.getElementById("top").innerHTML = "Topper: none " ;
 }
 else{
